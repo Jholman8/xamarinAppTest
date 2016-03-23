@@ -1,57 +1,88 @@
-﻿using Foundation;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Foundation;
 using UIKit;
+using System.Net;
+using System.Collections.ObjectModel;
 
 namespace RSSReader
 {
 	// The UIApplicationDelegate for the application. This class is responsible for launching the
 	// User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
+
 	[Register ("AppDelegate")]
-	public class AppDelegate : UIApplicationDelegate
-	{
-		// class-level declarations
+	public partial class AppDelegate : UIApplicationDelegate {
 
-		public override UIWindow Window {
-			get;
-			set;
-		}
+		static readonly Uri RssFeedUrl = new Uri ("http://phobos.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topfreeapplications/limit=25/xml");
 
-		public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
+		UINavigationController NavigationController { get; set; }
+
+		AppViewController RootController { get; set; }
+
+		public override UIWindow Window { get; set; }
+
+		/// <summary>
+		/// This method is invoked when the application has loaded and is ready to run. In this
+		/// method you should instantiate the window, load the UI into it and then make the window
+		/// visible.
+		/// </summary>
+		/// <remarks>
+		/// You have 5 seconds to return from this method, or iOS will terminate your application.
+		/// </remarks>
+		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
-			// Override point for customization after application launch.
-			// If not required for your application you can safely delete this method
+			Window = new UIWindow (UIScreen.MainScreen.Bounds);
+			RootController = new AppViewController (null, null);
+			NavigationController = new UINavigationController (RootController);
+			Window.RootViewController = NavigationController;
 
+			// make the window visible
+			Window.MakeKeyAndVisible ();
+
+			BeginDownloading ();
 			return true;
 		}
 
-		public override void OnResignActivation (UIApplication application)
+		void BeginDownloading ()
 		{
-			// Invoked when the application is about to move from active to inactive state.
-			// This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) 
-			// or when the user quits the application and it begins the transition to the background state.
-			// Games should use this method to pause the game.
+			// Show the user that data is about to be downloaded
+			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
+
+			// Retrieve the rss feed from the server
+			var downloader = new GzipWebClient ();
+			downloader.DownloadStringCompleted += DownloadCompleted;
+			downloader.DownloadStringAsync (RssFeedUrl);
 		}
 
-		public override void DidEnterBackground (UIApplication application)
+		void DownloadCompleted (object sender, DownloadStringCompletedEventArgs e)
 		{
-			// Use this method to release shared resources, save user data, invalidate timers and store the application state.
-			// If your application supports background exection this method is called instead of WillTerminate when the user quits.
+			// The WebClient will invoke the DownloadStringCompleted event on a
+			// background thread. We want to do UI updates with the result, so process
+			// the result on the main thread.
+			UIApplication.SharedApplication.BeginInvokeOnMainThread (() => {
+				// First disable the download indicator
+				UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+
+				// Now handle the result from the WebClient
+				if (e.Error != null) {
+					DisplayError ("Warning", "The rss feed could not be downloaded: " + e.Error.Message);
+				} else {
+					try {
+						RootController.Apps.Clear ();
+						foreach (var v in RssParser.Parse (e.Result))
+							RootController.Apps.Add (v);
+					} catch {
+						DisplayError ("Warning", "Malformed Xml was found in the Rss Feed.");
+					}
+				}
+			});
 		}
 
-		public override void WillEnterForeground (UIApplication application)
+		void DisplayError (string title, string errorMessage, params object[] formatting)
 		{
-			// Called as part of the transiton from background to active state.
-			// Here you can undo many of the changes made on entering the background.
-		}
-
-		public override void OnActivated (UIApplication application)
-		{
-			// Restart any tasks that were paused (or not yet started) while the application was inactive. 
-			// If the application was previously in the background, optionally refresh the user interface.
-		}
-
-		public override void WillTerminate (UIApplication application)
-		{
-			// Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
+			var alert = new UIAlertView (title, string.Format (errorMessage, formatting), null, "ok", null);
+			alert.Show ();
 		}
 	}
 }

@@ -1,0 +1,9 @@
+/Users/jacobholman/Desktop/RSSReader/RSSReader/obj/iPhone/Debug/mtouch-cache/32/Link/Xamarin.iOS.dll
+/Users/jacobholman/Desktop/RSSReader/RSSReader/obj/iPhone/Debug/mtouch-cache/32/Link/RSSReader.exe
+/Users/jacobholman/Desktop/RSSReader/RSSReader/obj/iPhone/Debug/mtouch-cache/32/Link/System.Runtime.Serialization.dll
+/Users/jacobholman/Desktop/RSSReader/RSSReader/obj/iPhone/Debug/mtouch-cache/32/Link/System.Xml.dll
+/Users/jacobholman/Desktop/RSSReader/RSSReader/obj/iPhone/Debug/mtouch-cache/32/Link/System.dll
+/Users/jacobholman/Desktop/RSSReader/RSSReader/obj/iPhone/Debug/mtouch-cache/32/Link/System.ServiceModel.Internals.dll
+/Users/jacobholman/Desktop/RSSReader/RSSReader/obj/iPhone/Debug/mtouch-cache/32/Link/System.Xml.Linq.dll
+/Users/jacobholman/Desktop/RSSReader/RSSReader/obj/iPhone/Debug/mtouch-cache/32/Link/mscorlib.dll
+/Users/jacobholman/Desktop/RSSReader/RSSReader/obj/iPhone/Debug/mtouch-cache/32/Link/System.Core.dll

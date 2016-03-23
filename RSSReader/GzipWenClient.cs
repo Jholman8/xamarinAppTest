@@ -1,11 +1,15 @@
 ﻿using System;
-
+using System.Net;
 namespace RSSReader
 {
-	public class GzipWenClient
+	public class GzipWebClient : WebClient
 	{
-		public GzipWenClient ()
+		protected override WebRequest GetWebRequest (Uri address)
 		{
+			var request = base.GetWebRequest (address);
+			if (request is HttpWebRequest)
+				((HttpWebRequest) request).AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
+			return request;
 		}
 	}
 }

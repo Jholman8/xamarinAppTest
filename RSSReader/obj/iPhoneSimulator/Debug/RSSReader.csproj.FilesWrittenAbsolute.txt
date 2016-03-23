@@ -16,3 +16,5 @@
 /Users/jacobholman/Desktop/RSSReader/RSSReader/bin/iPhoneSimulator/Debug/RSSReader.exe
 /Users/jacobholman/Desktop/RSSReader/RSSReader/obj/iPhoneSimulator/Debug/RSSReader.exe
 /Users/jacobholman/Desktop/RSSReader/RSSReader/obj/iPhoneSimulator/Debug/RSSReader.exe.mdb
+/Users/jacobholman/Desktop/RSSReader/RSSReader/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/64-view-65.nib
+/Users/jacobholman/Desktop/RSSReader/RSSReader/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/UITableViewController-64.nib
