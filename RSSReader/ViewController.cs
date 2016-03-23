@@ -14,6 +14,8 @@ namespace RSSReader
 		{
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
+			string[] data = new string[]{"test","test2"};
+			tableView.Source = new TableviewSource(data);
 		}
 
 		public override void DidReceiveMemoryWarning ()

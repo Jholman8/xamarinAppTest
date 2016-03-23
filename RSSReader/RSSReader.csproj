@@ -96,6 +96,11 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="TableviewSource.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Resources\App Symbol Filled-32.png" />
+    <BundleResource Include="Resources\TV Show Filled-32.png" />
+  </ItemGroup>
 </Project>
