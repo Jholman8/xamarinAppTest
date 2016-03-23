@@ -1,0 +1,254 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BD04C780000000000000000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6159160000000000000000 /* UIKit.framework */; };
+		20F6FC490000000000000000 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248808E70000000000000000 /* MapKit.framework */; };
+		1B83F7CE0000000000000000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F15046C0000000000000000 /* Foundation.framework */; };
+		1610F3530000000000000000 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A1FFF10000000000000000 /* CoreGraphics.framework */; };
+		42DBC8C00000000000000000 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BEC92A00000000000000000 /* Images.xcassets */; };
+		78BE60E00000000000000000 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1CF2AC00000000000000000 /* LaunchScreen.xib */; };
+		23E167E20000000000000000 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277274800000000000000000 /* Main.storyboard */; };
+		25907CA30000000000000000 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 292189410000000000000000 /* Info.plist */; };
+		E48391200000000000000000 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11D945B00000000000000000 /* Entitlements.plist */; };
+		3C4016E00000000000000000 /* App Symbol Filled-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD1237E0000000000000000 /* App Symbol Filled-32.png */; };
+		333C05C70000000000000000 /* TV Show Filled-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 36CD12650000000000000000 /* TV Show Filled-32.png */; };
+		BCD97E100000000000000000 /* Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = F5EA47F00000000000000000 /* Placeholder.png */; };
+		19DEE73D0000000000000000 /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FF3DB0000000000000000 /* AppDelegate.h */; };
+		30C164960000000000000000 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 345271340000000000000000 /* AppDelegate.m */; };
+		15E814670000000000000000 /* AppViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 197921050000000000000000 /* AppViewController.h */; };
+		CE4034E00000000000000000 /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10750FEC0000000000000000 /* AppViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1CE82D920000000000000000 /* RSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "RSSReader.app"; path = "RSSReader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F6159160000000000000000 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; };
+		248808E70000000000000000 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "MapKit.framework"; path = "System/Library/Frameworks/MapKit.framework"; sourceTree = SDKROOT; };
+		1F15046C0000000000000000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; };
+		19A1FFF10000000000000000 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreGraphics.framework"; path = "System/Library/Frameworks/CoreGraphics.framework"; sourceTree = SDKROOT; };
+		7BEC92A00000000000000000 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Images.xcassets"; path = "Images.xcassets"; sourceTree = "<group>"; };
+		B1CF2AC00000000000000000 /* LaunchScreen.xib */ = {isa = PBXFileReference; name = "LaunchScreen.xib"; path = "LaunchScreen.xib"; sourceTree = "<group>"; };
+		277274800000000000000000 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "Main.storyboard"; path = "Main.storyboard"; sourceTree = "<group>"; };
+		292189410000000000000000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info.plist"; path = "Info.plist"; sourceTree = "<group>"; };
+		11D945B00000000000000000 /* Entitlements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Entitlements.plist"; path = "Entitlements.plist"; sourceTree = "<group>"; };
+		3FD1237E0000000000000000 /* App Symbol Filled-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "App Symbol Filled-32.png"; path = "App Symbol Filled-32.png"; sourceTree = "<group>"; };
+		36CD12650000000000000000 /* TV Show Filled-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TV Show Filled-32.png"; path = "TV Show Filled-32.png"; sourceTree = "<group>"; };
+		F5EA47F00000000000000000 /* Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Placeholder.png"; path = "Images.xcassets/Placeholder.png"; sourceTree = "<group>"; };
+		1D6FF3DB0000000000000000 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate.h"; path = "AppDelegate.h"; sourceTree = "<group>"; };
+		345271340000000000000000 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate.m"; path = "AppDelegate.m"; sourceTree = "<group>"; };
+		197921050000000000000000 /* AppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppViewController.h"; path = "AppViewController.h"; sourceTree = "<group>"; };
+		10750FEC0000000000000000 /* AppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppViewController.m"; path = "AppViewController.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		243D29EA0000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD04C780000000000000000 /* UIKit.framework in Frameworks */,
+				20F6FC490000000000000000 /* MapKit.framework in Frameworks */,
+				1B83F7CE0000000000000000 /* Foundation.framework in Frameworks */,
+				1610F3530000000000000000 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4569B7800000000000000000 = {
+			isa = PBXGroup;
+			children = (
+				2EF04FC40000000000000000 /* RSSReader */,
+				F09C15200000000000000000 /* Frameworks */,
+				39A3759E0000000000000000 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		39A3759E0000000000000000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CE82D920000000000000000 /* RSSReader.app */,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		F09C15200000000000000000 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F6159160000000000000000 /* UIKit.framework */,
+				248808E70000000000000000 /* MapKit.framework */,
+				1F15046C0000000000000000 /* Foundation.framework */,
+				19A1FFF10000000000000000 /* CoreGraphics.framework */,
+			);
+			name = "Frameworks";
+			sourceTree = "<group>";
+		};
+		2EF04FC40000000000000000 /* RSSReader */ = {
+			isa = PBXGroup;
+			children = (
+				3FD1237E0000000000000000 /* App Symbol Filled-32.png */,
+				1D6FF3DB0000000000000000 /* AppDelegate.h */,
+				197921050000000000000000 /* AppViewController.h */,
+				11D945B00000000000000000 /* Entitlements.plist */,
+				7BEC92A00000000000000000 /* Images.xcassets */,
+				292189410000000000000000 /* Info.plist */,
+				B1CF2AC00000000000000000 /* LaunchScreen.xib */,
+				277274800000000000000000 /* Main.storyboard */,
+				36CD12650000000000000000 /* TV Show Filled-32.png */,
+				24C4F0330000000000000000 /* Images.xcassets */,
+				27F036990000000000000000 /* Supporting Files */,
+			);
+			name = "RSSReader";
+			sourceTree = "<group>";
+		};
+		24C4F0330000000000000000 /* Images.xcassets */ = {
+			isa = PBXGroup;
+			children = (
+				F5EA47F00000000000000000 /* Placeholder.png */,
+			);
+			name = "Images.xcassets";
+			sourceTree = "<group>";
+		};
+		27F036990000000000000000 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				345271340000000000000000 /* AppDelegate.m */,
+				10750FEC0000000000000000 /* AppViewController.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		204657140000000000000000 /* RSSReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 123507B80000000000000000 /* Build configuration list for PBXNativeTarget "RSSReader" */;
+			buildPhases = (
+				1267EAD40000000000000000 /* Sources */,
+				243D29EA0000000000000000 /* Frameworks */,
+				3B528A5F0000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RSSReader";
+			productName = "RSSReader";
+			productReference = 1CE82D920000000000000000 /* RSSReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1593313A0000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 781E1DE00000000000000000 /* Build configuration list for PBXProject "RSSReader" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4569B7800000000000000000;
+			productRefGroup = 39A3759E0000000000000000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				204657140000000000000000 /* RSSReader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B528A5F0000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42DBC8C00000000000000000 /* Images.xcassets in Resources */,
+				78BE60E00000000000000000 /* LaunchScreen.xib in Resources */,
+				23E167E20000000000000000 /* Main.storyboard in Resources */,
+				25907CA30000000000000000 /* Info.plist in Resources */,
+				E48391200000000000000000 /* Entitlements.plist in Resources */,
+				3C4016E00000000000000000 /* App Symbol Filled-32.png in Resources */,
+				333C05C70000000000000000 /* TV Show Filled-32.png in Resources */,
+				BCD97E100000000000000000 /* Placeholder.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1267EAD40000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19DEE73D0000000000000000 /* AppDelegate.h in Sources */,
+				30C164960000000000000000 /* AppDelegate.m in Sources */,
+				15E814670000000000000000 /* AppViewController.h in Sources */,
+				CE4034E00000000000000000 /* AppViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E8A898C0000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+			};
+			name = MonoTouch;
+		};
+		3CCEBC040000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				PRODUCT_NAME = "RSSReader";
+				WRAPPER_EXTENSION = app;
+			};
+			name = MonoTouch;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		781E1DE00000000000000000 /* Build configuration list for PBXProject "RSSReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E8A898C0000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+		123507B80000000000000000 /* Build configuration list for PBXNativeTarget "RSSReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CCEBC040000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1593313A0000000000000000 /* Project object */;
+}

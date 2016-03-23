@@ -80,7 +80,11 @@ namespace RSSReader
 			cell.Tag = indexPath.Row;
 			cell.TextLabel.Text = app.Name;
 			cell.DetailTextLabel.Text = app.Disc;
-			cell.DetailTextLabel.SizeToFit = true;
+			tableView.RowHeight = UITableView.AutomaticDimension;
+			cell.DetailTextLabel.LineBreakMode = UILineBreakMode.TailTruncation;
+			cell.DetailTextLabel.Lines = 3;
+			cell.DetailTextLabel.SizeToFit ();
+
 			// If the Image for this App has not been downloaded,
 			// use the Placeholder image while we try to download
 			// the real image from the web.
@@ -91,6 +95,15 @@ namespace RSSReader
 			cell.ImageView.Image = app.Image;
 			return cell;
 		}
+
+		public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
+		{
+			// In here you could customize how you want to get the height for row. Then   
+			// just return it. 
+
+			return 70;
+		}
+
 		public override void RowSelected(UITableView tableView, Foundation.NSIndexPath indexPath){
 			var app = Controller.Apps [indexPath.Row];
 			//using concat because I cant find the way to convert directly to string. Crunched on time.
