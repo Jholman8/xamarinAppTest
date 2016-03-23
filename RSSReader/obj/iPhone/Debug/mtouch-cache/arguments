@@ -1,0 +1,38 @@
+# Version: 9.6.0.0 (ios9.3: d7cac50)
+# [first argument, ignore] # /Users/jacobholman/Desktop/RSSReader/RSSReader/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/9.6.0.0/bin/mtouch \
+	--cache \
+	/Users/jacobholman/Desktop/RSSReader/RSSReader/obj/iPhone/Debug/mtouch-cache \
+	--dev \
+	/Users/jacobholman/Desktop/RSSReader/RSSReader/bin/iPhone/Debug/RSSReader.app \
+	--executable \
+	RSSReader \
+	--debug \
+	--linksdkonly \
+	--sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--sdk \
+	9.2 \
+	--targetver \
+	9.2 \
+	--aot-options=-O=float32 \
+	--new-refcount \
+	"--abi=armv7,arm64" \
+	--symbollist \
+	/Users/jacobholman/Desktop/RSSReader/RSSReader/obj/iPhone/Debug/mtouch-symbols.list \
+	--dsym=no \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.Linq.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
+	--target-framework \
+	"Xamarin.iOS,v1.0" \
+	/Users/jacobholman/Desktop/RSSReader/RSSReader/bin/iPhone/Debug//RSSReader.exe \
