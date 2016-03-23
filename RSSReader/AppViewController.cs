@@ -4,9 +4,9 @@ using UIKit;
 
 namespace RSSReader
 {
-	public partial class ViewController : UIViewController
+	public partial class AppViewController : UIViewController
 	{
-		public ViewController (IntPtr handle) : base (handle)
+		public AppViewController () : base ("AppViewController", null)
 		{
 		}
 
@@ -14,8 +14,6 @@ namespace RSSReader
 		{
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
-			string[] data = new string[]{"test","test2"};
-			tableView.Source = new TableviewSource(data);
 		}
 
 		public override void DidReceiveMemoryWarning ()
@@ -25,4 +23,5 @@ namespace RSSReader
 		}
 	}
 }
+
 
